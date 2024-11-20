@@ -23,7 +23,9 @@ $('document').ready(function(){
 		$('#bulb_green').addClass('bulb-glow-green');
 		$('#bulb_pink').addClass('bulb-glow-pink');
 		$('#bulb_orange').addClass('bulb-glow-orange');
-		$('body').addClass('peach');
+		// $('body').addClass('peach');
+		$('body').addClass('neon-effect'); // Apply new neon effect class
+
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
@@ -38,7 +40,11 @@ $('document').ready(function(){
 		$('#bulb_pink').addClass('bulb-glow-pink-after');
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
 		$('body').css('backgroud-color','#FFF');
-		$('body').addClass('peach-after');
+		// $('body').addClass('peach-after');
+		// $('body').css('background', 'linear-gradient(135deg, #ff00ff, #00ffff)');
+		$('body').css('background', 'linear-gradient(135deg, #ff00ff, #00ffff)');
+
+
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
 		});
@@ -139,30 +145,85 @@ $('document').ready(function(){
 	});
 
 		
-	$('#wish_message').click(function(){
-		 vw = $(window).width()/2;
+		// $('#wish_message').click(function(){
+		// 	 vw = $(window).width()/2;
 
-		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-		$('#b1').attr('id','b11');
-		$('#b2').attr('id','b22')
-		$('#b3').attr('id','b33')
-		$('#b4').attr('id','b44')
-		$('#b5').attr('id','b55')
-		$('#b6').attr('id','b66')
-		$('#b7').attr('id','b77')
-		$('#b11').animate({top:240, left: vw-350},500);
-		$('#b22').animate({top:240, left: vw-250},500);
-		$('#b33').animate({top:240, left: vw-150},500);
-		$('#b44').animate({top:240, left: vw-50},500);
-		$('#b55').animate({top:240, left: vw+50},500);
-		$('#b66').animate({top:240, left: vw+150},500);
-		$('#b77').animate({top:240, left: vw+250},500);
-		$('.balloons').css('opacity','0.9');
+		// 	$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
+		// 	$('#b1').attr('id','b11');
+		// 	$('#b2').attr('id','b22')
+		// 	$('#b3').attr('id','b33')
+		// 	$('#b4').attr('id','b44')
+		// 	$('#b5').attr('id','b55')
+		// 	$('#b6').attr('id','b66')
+		// 	$('#b7').attr('id','b77')
+		// 	$('#b11').animate({top:240, left: vw-350},500);
+		// 	$('#b22').animate({top:240, left: vw-250},500);
+		// 	$('#b33').animate({top:240, left: vw-150},500);
+		// 	$('#b44').animate({top:240, left: vw-50},500);
+		// 	$('#b55').animate({top:240, left: vw+50},500);
+		// 	$('#b66').animate({top:240, left: vw+150},500);
+		// 	$('#b77').animate({top:240, left: vw+250},500);
+		// 	$('.balloons').css('opacity','0.9');
+		// 	$('.balloons h2').fadeIn(3000);
+		// 	$(this).fadeOut('slow').delay(3000).promise().done(function(){
+		// 		$('#story').fadeIn('slow');
+		// 	});
+		// });
+	$('#wish_message').click(function() {
+		vw = $(window).width() / 2;
+	
+		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9').stop();
+		$('#b1').attr('id', 'b11');
+		$('#b2').attr('id', 'b22');
+		$('#b3').attr('id', 'b33');
+		$('#b4').attr('id', 'b44');
+		$('#b5').attr('id', 'b55');
+		$('#b6').attr('id', 'b66');
+		$('#b7').attr('id', 'b77');
+		$('#b8').attr('id', 'b88');
+		$('#b9').attr('id', 'b99');
+	
+		$('#b11').animate({ top: 240, left: vw - 400 }, 500);
+		$('#b22').animate({ top: 240, left: vw - 300 }, 500);
+		$('#b33').animate({ top: 240, left: vw - 200 }, 500);
+		$('#b44').animate({ top: 240, left: vw - 100 }, 500);
+		$('#b55').animate({ top: 240, left: vw + 0 }, 500);
+		$('#b66').animate({ top: 240, left: vw + 100 }, 500);
+		$('#b77').animate({ top: 240, left: vw + 200 }, 500);
+		$('#b88').animate({ top: 240, left: vw + 300 }, 500);
+		$('#b99').animate({ top: 240, left: vw + 400 }, 500);
+	
+		$('.balloons').css('opacity', '0.9');
 		$('.balloons h2').fadeIn(3000);
-		$(this).fadeOut('slow').delay(3000).promise().done(function(){
+		$(this).fadeOut('slow').delay(3000).promise().done(function() {
 			$('#story').fadeIn('slow');
 		});
 	});
+			// $('#wish_message').click(function() {
+			// 	vw = $(window).width(); // Get full viewport width
+			// 	let spacing = vw / 10; // Divide into equal sections
+			
+			// 	// Stop existing animations and reposition balloons
+			// 	$('#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9').stop();
+			// 	$('#b1').animate({ top: 240, left: spacing * 1 }, 500);
+			// 	$('#b2').animate({ top: 240, left: spacing * 2 }, 500);
+			// 	$('#b3').animate({ top: 240, left: spacing * 3 }, 500);
+			// 	$('#b4').animate({ top: 240, left: spacing * 4 }, 500);
+			// 	$('#b5').animate({ top: 240, left: spacing * 5 }, 500);
+			// 	$('#b6').animate({ top: 240, left: spacing * 6 }, 500);
+			// 	$('#b7').animate({ top: 240, left: spacing * 7 }, 500);
+			// 	$('#b8').animate({ top: 240, left: spacing * 8 }, 500);
+			// 	$('#b9').animate({ top: 240, left: spacing * 9 }, 500);
+			
+			// 	$('.balloons').css('opacity', '0.9');
+			// 	$('.balloons h2').fadeIn(3000);
+			// 	$(this).fadeOut('slow').delay(3000).promise().done(function() {
+			// 		$('#story').fadeIn('slow');
+			// 	});
+			// });
+
+			
+	
 	
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
